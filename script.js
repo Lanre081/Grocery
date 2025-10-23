@@ -2,9 +2,10 @@
 let groceries = [
   { name: "Rice", price: 3000 },
   { name: "Beans", price: 2500 },
-  { name: "Oil", price: 1200 }
-  { name: "Fish", price: 2000 }
-  { name: "Maggi", price: 1300 }
+  { name: "Oil",  price: 1200 },
+  { name: "Fish",  price: 1400 },
+  { name: "Maggi",  price: 2200 },
+
 ];
 
 const groceryList = document.getElementById("groceryList");
@@ -47,7 +48,7 @@ function calculateTotal() {
   totalDisplay.textContent = `Total Price: ₦${total}`;
 }
 
-// ➕ Add new item
+//  Add new item
 addBtn.addEventListener("click", () => {
   const name = itemName.value.trim();
   const price = itemPrice.value.trim();
@@ -63,10 +64,10 @@ addBtn.addEventListener("click", () => {
   itemPrice.value = "";
 });
 
-// 🧾 Total price button
+//  Total price button
 totalBtn.addEventListener("click", calculateTotal);
 
-// 🖥️ Display initial list when page loads
+//  Display initial list when page loads
 renderList();
 
 
@@ -77,60 +78,7 @@ renderList();
 
 
 
-// const groceries = [
-//   { grocery: 'Rice',  price: 1600,},
-//   { grocery: 'Beans', price: 2200,},
-//   { grocery: 'Sugar', price: 1090,},
-//   { grocery: 'Palm Oil', price: 1190,},
-//   { grocery: 'Milk',  price: 1290,},
-//   { grocery: 'Tomato', price: 3090,},
-//   { grocery: 'Egg',   price: 2090,},
-//   { grocery: 'Salt', price: 4590,},
-//   { grocery: 'potatoe', price: 2090,},
-//   { grocery: 'Onions', price: 900,},
-//   { grocery: 'Maggi', price: 1090,},
-//   { grocery: 'Ponmo', price: 2390,},
-//   { grocery: 'Fish', price: 5090,},
-  
-// ];
 
-
-
-// let selected = [];  //to collect all the grocery selected
-
-// const searchInput = document.getElementById("searchForGroceries").value;
-// const groceryList = document.getElementById("groceryList");
-// const selectedItemDiv = document.getElementById("selectedItem");
-// const btn = document.getElementById("btn");
-
-// //To display all students
-// groceries.forEach((groceries) => {
-//   const li = document.createElement("li");
-//   li.textContent = `${groceries.grocery} - grocery: ${groceries.grocery}, price: ${groceries.price}`;
-//   searchInput.appendChild(li);
-// });
-
-
-// btn.addEventListener("click", () => {
-//   const searchName = searchForGroceries.value.trim().toLowerCase();
-//   let found = false;
-//   selectedItemDiv.innerHTML = ""; // clear previous result
-
-//   groceries.forEach((groceries) => {
-//     if (groceries.grocery.toLowerCase() === searchName) {
-//       selectedItemDiv.innerHTML = 
-//       `
-//         <p><strong>grocery:</strong> ${groceries.grocery}</p>
-//         <p><strong>Price:</strong> ${groceries.price}</p>
-//       `;
-//       found = true;
-//     }
-//   });
-
-//   if (!found) {
-//     selectedItemDiv.innerHTML = "<p style='color:red;'>Student not found!</p>";
-//   }
-// });
 
 
 
