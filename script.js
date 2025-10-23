@@ -3,6 +3,8 @@ let groceries = [
   { name: "Rice", price: 3000 },
   { name: "Beans", price: 2500 },
   { name: "Oil", price: 1200 }
+  { name: "Fish", price: 2000 }
+  { name: "Maggi", price: 1300 }
 ];
 
 const groceryList = document.getElementById("groceryList");
@@ -12,7 +14,7 @@ const itemPrice = document.getElementById("itemPrice");
 const totalBtn = document.getElementById("totalBtn");
 const totalDisplay = document.getElementById("totalDisplay");
 
-// 🧩 Function to render list
+// Function to render list
 function renderList() {
   groceryList.innerHTML = ""; // clear previous list
 
@@ -36,7 +38,7 @@ function renderList() {
   });
 }
 
-// 🧮 Function to calculate total
+//  Function to calculate total
 function calculateTotal() {
   let total = 0;
   groceries.forEach(item => {
